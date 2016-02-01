@@ -1,0 +1,87 @@
+Casey Germain
+Lab 1: Discrete Math Review?
+
+Number Representation
+	2 4 8 16 32 64 128 256 512 1024 2048
+
+1) 1590 to Binary	0b11000110110
+2) 0b101110110 to decimal	2+4+16+32+64+256	374
+3) 0b1100 0000 0001 1010 0001 0101 1011 1010 1101 to hex	0xC01A15BAD
+4) 0b100 001 101 101 to octal	0o4155
+5) 0o31337 to binary	0b011 001 011 011 111
+6) 0xBADF00D to binary	0b001 011 101 011 011 111 000 000 001 101
+	then to octal	0o1353370015
+7) 0o6157 to binary	0b110 001 101 111
+	then to decimal	1+2+4+8+16+32+512+1024	1599
+8) 497 to binary	0b111110001
+	then find two's complement for -497	-0b100001110
+9) 900.79 to binary	0b1110000100.1100
+10) 0-10 in ternary	0, 1, 2, 10, 11, 12, 20, 21, 22, 30, 31 
+
+Circuit Design
+
+1)
+	A1	A0	B1	B0	A<=B
+	0	0	0	0	1
+	0	0	0	1	1
+	0	0	1	0	1
+	0	0	1	1	1
+	0	1	0	0	0
+	0	1	0	1	1
+	0	1	1	0	1
+	0	1	1	1	1
+	1	0	0	0	0
+	1	0	0	1	0
+	1	0	1	0	1
+	1	0	1	1	1
+	1	1	0	0	0
+	1	1	0	1	0
+	1	1	1	0	0
+	1	1	1	1	1
+
+2) 	B1B0 + A1'A0' + A0'B1 + A1'B0 + A1'B1
+
+3)
+	X	Y	Z	Min
+	0	0	0	1
+	0	0	1	1
+	0	1	0	1
+	0	1	1	0
+	1	0	0	1
+	1	0	1	0
+	1	1	0	0
+	1	1	1	0
+
+4)   X'Y'Z' + X'Y'Z + X'YZ' + XY'Z'		X'Z + Y'Z'
+
+Boolean Algebra
+
+1) c + (b * c)' = 1
+   c + b' + c' = 1
+   b' + 1 = 1
+
+2) (a + c) * (a * d + a * d') + a * c + c = a + c
+   (a + c) * (a * 1) + a * c + c = a + c
+   a * (a + c) + (a * c) + c = a + c
+   a + (a * c) + c = a + c
+   a + c = a + c
+
+3) a' * (a + b) + (b + a * a) * (a + b')
+   a' * (a + b) + (b + a) * (a + b')
+   0 + (a * b) + (a) + (0)
+   a + (a * b)
+   a
+
+4) (a' * b') + (a' * b) + (a * b') = (a * b)'
+   a' * (b' + b) + (a' * b') + (a * b') = (a * b)'
+   a' + b' * (a + a') = (a * b)'
+   a' + b' = (a * b)'
+   (a * b)' = (a * b)'
+
+
+Dual Form
+
+1) (a + b)' + c * a' + 1
+
+2) 0 + 0 * 1'
+   
