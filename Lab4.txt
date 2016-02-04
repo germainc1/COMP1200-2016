@@ -1,0 +1,28 @@
+int a = RAM[Ox80]
+int b = RAM[Ox81]
+int max = a;
+if(b > a){
+    max = b;}
+
+
+R1 = RAM[Ox80]
+R2 = RAM[Ox81]
+R3 = R1
+R4 = R1 - R2
+if (R4 > 0) goto 6
+R3 = R2
+
+
+LOAD R1, Ox80
+LOAD R2, Ox81
+MOV R3, Ox01
+SUB R4, R1, R2
+JZG R4, Ox06
+MOV R3, Ox02
+
+C180
+C281
+7301
+1412
+a406
+7302
